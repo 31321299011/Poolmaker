@@ -33,7 +33,7 @@ def home():
     return "Io Poll Maker Bot is Running!"
 
 def run_flask():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
 
 # ---------- JSONBin ইউটিলিটি ----------
 def get_db():
